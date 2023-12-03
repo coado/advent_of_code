@@ -12,6 +12,7 @@ class Solution:
     def is_symbol(self, el):
         return el != '.' and not el.isdigit()
     
+    # Check if array contains any symbol
     def contains_symbol(self, arr):
         for el in arr:
             if self.is_symbol(el):
@@ -69,6 +70,7 @@ class Solution:
                         total += cur
                     cur = 0
 
+                # Check if there is a symbol in the window
                 is_adjacent = self.contains_symbol(window)
 
             if is_adjacent:
@@ -90,8 +92,8 @@ class Solution:
                     continue
                 
                 window = parsed[max(0, r-1):min(r+2, ROWS), max(0, c-1):min(c+2, COLS)]
-                print(window)
                 adjacent_numbers = []
+                
                 for row in window:
                     unique_numbers_in_row = [i for i in np.unique(row) if i != 0]
                     adjacent_numbers += unique_numbers_in_row
