@@ -1,6 +1,6 @@
 ## Part One: Sliding Window Approach
 
-In this quest, a sliding window of height 3 (or 2 at the edges) is employed to process numbers and their adjacent symbols. The algorithm consists of four key steps:
+In this quest, a sliding window of height 3 (or 2 at the edges) is employed to process numbers and their adjacent symbols. The algorithm consists of four key states:
 
 1. **No Symbol and Number:**
 
