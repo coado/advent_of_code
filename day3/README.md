@@ -1,6 +1,6 @@
 ## Part One: Sliding Window Approach
 
-In this quest, a sliding window of height 3 (or 2 at the edges) is employed to process numbers and their adjacent symbols. The algorithm consists of four key steps:
+In this quest, a sliding window of height 3 (or 2 at the edges) is employed to process numbers and their adjacent symbols. The algorithm consists of four key states:
 
 1. **No Symbol and Number:**
 
@@ -20,8 +20,13 @@ In this quest, a sliding window of height 3 (or 2 at the edges) is employed to p
    - When there is no number, and the read number is not 0 (indicating completion of number reading):
      - Check if there is a symbol in the current window (adjacent to the right side).
      - If adjacent, add to the total and clear the read number.
+    
+![image](https://github.com/coado/advent_of_code_2023/assets/64146291/c7defd6c-7323-4f6e-bb5b-f624dda6c0ff)
 
 Additionally, account for reading a number at the edge of the line after the iteration.
+
+![image](https://github.com/coado/advent_of_code_2023/assets/64146291/e57633ef-36d3-4524-900a-eafe4e7fec0f)
+
 
 ## Part Two
 
@@ -38,3 +43,6 @@ Additionally, account for reading a number at the edge of the line after the ite
   - If the count of adjacent numbers is 2:
     - Multiply the two numbers.
     - Add to the result
+
+![image](https://github.com/coado/advent_of_code_2023/assets/64146291/fd1ea4e0-f949-4e62-a8bf-72d570b81330)
+
