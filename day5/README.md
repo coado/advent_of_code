@@ -21,3 +21,6 @@ In this part, instead of single seed points, we are provided with seed ranges. T
 After processing all mappings, there might be a range left without a corresponding mapping, which is also added to the queue.
 
 Finally, the result is the lowest location from the ranges in the queue.
+
+![image](https://github.com/coado/advent_of_code_2023/assets/64146291/78b8b282-0212-4b66-82e9-2a5deb45e276)
+
