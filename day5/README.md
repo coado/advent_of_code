@@ -1,8 +1,8 @@
-## Part One - BFS
+## Part One - BFS ⭐
 
 In this part, we iterate over each mapping, checking if any seed lies within its range. If a seed is found, we update it to its corresponding destination value; otherwise, we move on to the next seed.
 
-## Part Two - BFS, Queue and Intervals
+## Part Two - BFS, Queue and Intervals ⭐⭐
 
 In this part, instead of single seed points, we are provided with seed ranges. The challenge lies in dealing with potential overlaps between a given seed range and multiple mapping ranges, resulting in different destinations for various segments of the seed range.
 
@@ -23,4 +23,3 @@ After processing all mappings, there might be a range left without a correspondi
 Finally, the result is the lowest location from the ranges in the queue.
 
 ![image](https://github.com/coado/advent_of_code_2023/assets/64146291/78b8b282-0212-4b66-82e9-2a5deb45e276)
-

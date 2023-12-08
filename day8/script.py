@@ -76,7 +76,6 @@ class Solution:
                 cur = left if commands[i] == "L" else right
                 distance += 1
                 i = i + 1 if i < len(commands) - 1 else 0
-                # print(cur)
 
             distances.append(distance)
 

@@ -1,8 +1,8 @@
-## Part one
+## Part one ⭐
 
 Iterate over characters in each line. Whenever we find a digit, we always want to update the last_digit. The first_digit is set only once. After the line is processed, we update the result.
 
-## Part two
+## Part two ⭐⭐
 
 ![image](https://github.com/coado/advent_of_code_2023/assets/64146291/b1706358-108f-4096-929e-1071f720e563)
 

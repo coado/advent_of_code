@@ -1,5 +1,5 @@
 import timeit
-
+import math
 
 class Solution:
 
@@ -13,19 +13,22 @@ class Solution:
         time = [int(i) for i in data[0].split(": ")[1].split(" ") if i != ""]
         distance = [int(i) for i in data[1].split(": ")[1].split(" ") if i != ""]
 
-        def race_fun(time):
-            return lambda hold_time: hold_time * (time - hold_time)
-
         res = 1
 
         for i in range(len(time)):
-            f = race_fun(time[i])
-            counter = 0
-            for j in range(1, time[i] + 1):
-                if f(j) > distance[i]:
-                    counter = time[i] - 2*j + 1
-                    break
-            res *= counter  
+            race_time = time[i]
+            race_distance = distance[i]
+
+            # y = x^2 - race_time * x + race_distance
+            a = 1
+            b = -race_time
+            c = race_distance
+
+            # x = (-b +- sqrt(b^2 - 4ac)) / 2a
+            x1 = math.ceil((-b - (b**2 - 4*a*c)**0.5) / (2*a))
+            x2 = math.floor((-b + (b**2 - 4*a*c)**0.5) / (2*a))
+
+            res *= (x2 - x1 + 1)
 
         return res 
     
@@ -33,14 +36,18 @@ class Solution:
         data = self.read_data().split("\n")
         time = int(''.join([i for i in data[0].split(": ")[1].split(" ") if i != ""]))
         distance = int(''.join([i for i in data[1].split(": ")[1].split(" ") if i != ""]))
+        
 
-        def race_fun(time):
-            return lambda hold_time: hold_time * (time - hold_time)
-        f = race_fun(time)
+        # y = x^2 - race_time * x + race_distance
+        a = 1
+        b = -time
+        c = distance
 
-        for j in range(1, time + 1):
-            if f(j) > distance:
-                return time - 2*j + 1
+        # x = (-b +- sqrt(b^2 - 4ac)) / 2a
+        x1 = math.ceil((-b - (b**2 - 4*a*c)**0.5) / (2*a))
+        x2 = math.floor((-b + (b**2 - 4*a*c)**0.5) / (2*a))
+        res = (x2 - x1 + 1)
+        return res
 
 def main():
     sol = Solution()
@@ -48,46 +55,7 @@ def main():
     time_part_one = (timeit.timeit(sol.part_one, number=10) / 10) * 1000
     print(f"Elapsed Time: {time_part_one:.3f} ms")
     print(sol.part_two())
+    time_part_two = (timeit.timeit(sol.part_two, number=10) / 10) * 1000
+    print(f"Elapsed Time: {time_part_two:.3f} ms")
 
 main()
-
-
-
-
-# class Solution:
-
-#     def read_data(self):
-#         with open("data.txt", "r") as f:
-#             data = f.read()
-#         return data
-
-#     def part_one(self):
-#         data = self.read_data().split("\n")
-#         time = [int(i) for i in data[0].split(": ")[1].split(" ") if i != ""]
-#         distance = [int(i) for i in data[1].split(": ")[1].split(" ") if i != ""]
-#         print(time, distance)
-
-#         def race_fun(time):
-#             return lambda hold_time: hold_time * (time - hold_time)
-
-#         res = 1
-
-#         for i in range(len(time)):
-#             f = race_fun(time[i])
-#             counter = 0
-#             for j in range(1, time[i] + 1):
-#                 if f(j) > distance[i]:
-#                     counter = time[i] - 2*j + 1
-#                     print(j)
-#                     break
-#             print(counter, time[i])
-#             res *= counter  
-
-#         return res 
-    
-# def main():
-#     sol = Solution()
-#     print(sol.part_one())
-#     # print(sol.part_two())
-
-# main()
