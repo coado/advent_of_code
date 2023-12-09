@@ -25,3 +25,5 @@ In part two, a new element is introduced: a joker (J) card that can act as any o
   - If two pair `AAK` → Full house
   - If pair `AAKQ` → Three of a kind
   - Otherwise `AKQT` → One pair
+
+![image](https://github.com/coado/advent_of_code_2023/assets/64146291/ba3590c9-93f1-4fe3-8cd3-de77e1721a1e)

@@ -13,3 +13,6 @@ Part two builds upon the approach from part one, utilizing the same quadratic eq
 `y = x * (time - x) - distance`
 
 This equation helps identify the time instances when the race record is either reached or surpassed. By leveraging the properties of this quadratic graph, the algorithm efficiently calculates the number of ways to beat the record. The simplicity and effectiveness of the equation streamline the solution to the given problem.
+
+
+![image](https://github.com/coado/advent_of_code_2023/assets/64146291/13ac9605-1a89-41a8-b57a-fefab62f0708)
