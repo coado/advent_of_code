@@ -102,7 +102,6 @@ class Solution:
         for i, row in enumerate(data):
             springs = row[0]
             damaged = row[1]
-            print(f"Row {i+1}: {springs}")
             res += self.combinations(springs, damaged)
 
         return res
