@@ -25,7 +25,7 @@ class Solution:
 
 def main():
     sol = Solution()
-    print(f"Part Two: {sol.run()}")
+    print(f"Part One: {sol.run()}")
     # elapsed = (timeit.timeit(sol.run, number=10) / 10) * 1000
     # print(f"Elapsed Time: {elapsed:.3f} ms")
 
