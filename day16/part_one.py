@@ -52,13 +52,13 @@ class Solution:
     def convert_to_coords(self, data):
         data = data.split("\n")
         ROWS, COLS = len(data), len(data[0])
-        coords = {}
+        coords = {} 
 
         for y in range(ROWS):
             for x in range(COLS):
                 coords[(x, y)] = data[y][x]
 
-        return coords, (ROWS, COLS)
+        return coords, (ROWS, COLS) 
                 
 
     def run(self):
